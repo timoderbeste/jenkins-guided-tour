@@ -1,6 +1,9 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent { docker { image 'python:3.6.9' } }
+    libraries {
+        lib('gconftools')
+    }
     stages {
         stage('build') {
             steps {
